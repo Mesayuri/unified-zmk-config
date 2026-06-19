@@ -1,11 +1,29 @@
 #include "sosho_L.dtsi"
+#include <input/processors.dtsi>
 
 &spi0 { status = "okay"; };
 &glidepoint {
     status = "okay";
     invert-x;
 };
+&glidepoint_listener {
+    status = "okay";
+    input-processors = <&zip_xy_scaler 2 1>;
+    scroller {
+        layers = <3>;
+        input-processors = <&zip_scroll_scaler 2 1 &zip_xy_to_scroll_mapper>;
+    };
+};
+
 &glidepoint_split {
     status = "okay";
     device = <&glidepoint>;
+};
+&glidepoint_split_listener {
+    status = "okay";
+    input-processors = <&zip_xy_scaler 2 1>;
+    scroller {
+        layers = <3>;
+        input-processors = <&zip_scroll_scaler 2 1 &zip_xy_to_scroll_mapper>;
+    };
 };
