@@ -11,7 +11,7 @@
 	//      <&zip_scroll_scaler 2 1 &zip_xy_to_scroll_mapper> は倍速です。
 	scroller {
 		layers = <3>;
-		input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_scaler 1 2>;
+		input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_scaler 1 4>;
 	};
 };
 
@@ -29,6 +29,6 @@
     // 例: 1 2 で半分、2 1 で2倍です。
     scroller {
         layers = <3>;
-        input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_scaler 1 2>;
+        input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_scaler 1 4>;
     };
 };

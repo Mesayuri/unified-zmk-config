@@ -30,7 +30,7 @@
 &msc {
     // 初速を遅くしたい場合：time-to-max-speed-ms を増やす（例：0→100, 200ms）
     // そうすると加速時間が長くなり、初速が遅くなります
-    time-to-max-speed-ms = <400>;   // 即座に最大速度（加速なし）
+    time-to-max-speed-ms = <300>;   // 即座に最大速度（加速なし）
     // acceleration-exponent を正の値にすると、初速が遅く最後に加速します
     acceleration-exponent = <0>;   // 加速なし（0は加速なし）
 };
