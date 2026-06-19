@@ -5,16 +5,8 @@
     status = "okay";
     invert-x;
 };
-&glidepoint_listener {
-    status = "okay";
-    input-processors = <&zip_xy_scaler 3 1>;
-};
 
 &glidepoint_split {
     status = "okay";
     device = <&glidepoint>;
-};
-&glidepoint_split_listener {
-    status = "okay";
-    input-processors = <&zip_xy_scaler 3 1>;
 };
